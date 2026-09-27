@@ -1,0 +1,1920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<meta name="description"
+content="Mir Talib AI — AI projects, websites, software ideas and digital solutions.">
+
+<meta name="theme-color" content="#070a12">
+
+<title>Mir Talib AI | Building With AI</title>
+
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<rect width='100' height='100' rx='22' fill='%23070a12'/>
+<text x='50' y='67' text-anchor='middle'
+font-size='48' font-family='Arial'
+font-weight='bold' fill='%2300e5ff'>MT</text>
+</svg>">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#070a12;
+    color:white;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1150px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(7,10,18,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid #172238;
+}
+
+.nav{
+    height:72px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+    color:#00e5ff;
+    letter-spacing:.3px;
+}
+
+.logo span{
+    color:white;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#aebbd0;
+    font-size:14px;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+.menu{
+    display:none;
+    border:1px solid #263653;
+    background:#0c1320;
+    color:white;
+    padding:8px 12px;
+    border-radius:10px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:#00e5ff;
+    opacity:.08;
+    filter:blur(120px);
+    border-radius:50%;
+    top:-150px;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:50px;
+    border:1px solid #15566a;
+    background:#071923;
+    color:#00e5ff;
+    font-size:13px;
+    margin-bottom:22px;
+}
+
+.hero h1{
+    font-size:clamp(43px,7vw,80px);
+    line-height:1.04;
+    margin-bottom:24px;
+}
+
+.cyan{
+    color:#00e5ff;
+}
+
+.hero p{
+    max-width:720px;
+    margin:auto;
+    color:#9eacc1;
+    font-size:17px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+    margin-top:32px;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 20px;
+    border-radius:12px;
+    border:1px solid #293853;
+    color:white;
+    font-weight:700;
+    transition:.2s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    border-color:#00e5ff;
+}
+
+.primary{
+    background:#00e5ff;
+    color:#001014;
+    border-color:#00e5ff;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:85px 0;
+}
+
+.section-title{
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.section-sub{
+    color:#8797ae;
+    margin-bottom:32px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+    align-items:center;
+}
+
+.about-box,
+.info-box,
+.contact-box{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:20px;
+    padding:28px;
+}
+
+.about-box p,
+.info-box p,
+.contact-box p{
+    color:#9ba9bd;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-top:28px;
+}
+
+.stat{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:16px;
+    padding:20px;
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+    color:#00e5ff;
+    font-size:27px;
+}
+
+.stat span{
+    color:#8291a7;
+    font-size:13px;
+}
+
+/* ================= PROJECTS ================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+.project{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:20px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.project:hover{
+    transform:translateY(-5px);
+    border-color:#00e5ff;
+    box-shadow:0 15px 40px rgba(0,229,255,.08);
+}
+
+/* PROJECT VISUAL */
+
+.visual{
+    height:245px;
+    padding:15px;
+    background:#050b14;
+}
+
+.app{
+    height:100%;
+    border:1px solid #213452;
+    border-radius:12px;
+    background:#08101d;
+    overflow:hidden;
+}
+
+.app-top{
+    height:38px;
+    display:flex;
+    align-items:center;
+    padding:0 12px;
+    border-bottom:1px solid #1a2b43;
+    color:#00e5ff;
+    font-weight:bold;
+    font-size:13px;
+}
+
+.app-body{
+    display:grid;
+    grid-template-columns:90px 1fr;
+    height:calc(100% - 38px);
+}
+
+.side{
+    border-right:1px solid #1a2b43;
+    padding:12px 7px;
+}
+
+.side div{
+    color:#71839c;
+    font-size:9px;
+    padding:7px 4px;
+    border-radius:5px;
+    margin-bottom:4px;
+}
+
+.side .active{
+    background:#103044;
+    color:#00e5ff;
+}
+
+.screen{
+    padding:13px;
+}
+
+.screen-title{
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.small-text{
+    color:#71839b;
+    font-size:9px;
+}
+
+.fake-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:7px;
+    margin-top:12px;
+}
+
+.fake-card{
+    height:55px;
+    border:1px solid #1e3451;
+    background:#0d1725;
+    border-radius:7px;
+    padding:8px;
+    font-size:8px;
+    color:#a7b5c7;
+}
+
+.fake-chart{
+    height:75px;
+    margin-top:10px;
+    border:1px solid #1c3450;
+    border-radius:8px;
+    position:relative;
+    overflow:hidden;
+}
+
+.fake-chart:after{
+    content:"";
+    position:absolute;
+    width:120%;
+    height:2px;
+    background:#00e5ff;
+    top:55%;
+    left:-10%;
+    transform:rotate(-8deg);
+    box-shadow:30px 18px 0 #00e5ff,
+               70px -12px 0 #00e5ff,
+               110px 10px 0 #00e5ff;
+}
+
+.poster{
+    background:linear-gradient(135deg,#101b4b,#17266a,#051019);
+}
+
+.study{
+    background:#f3f6fb;
+    color:#152033;
+}
+
+.study .app-top{
+    color:#126ee8;
+}
+
+.study .side{
+    border-color:#d8dfeb;
+}
+
+.study .side div{
+    color:#52647d;
+}
+
+.study .side .active{
+    background:#dcecff;
+    color:#126ee8;
+}
+
+.trade{
+    background:#041615;
+}
+
+.talib{
+    background:linear-gradient(135deg,#07152c,#06101e);
+}
+
+.project-content{
+    padding:21px;
+}
+
+.project-content h3{
+    font-size:21px;
+    margin-bottom:6px;
+}
+
+.project-content p{
+    color:#8e9db3;
+    font-size:14px;
+}
+
+.tags{
+    display:flex;
+    gap:7px;
+    flex-wrap:wrap;
+    margin-top:14px;
+}
+
+.tag{
+    border:1px solid #164b5e;
+    color:#00e5ff;
+    padding:4px 9px;
+    border-radius:50px;
+    font-size:11px;
+}
+
+/* ================= PROJECT DETAILS ================= */
+
+.project-page{
+    display:none;
+}
+
+.project-page.active{
+    display:block;
+}
+
+.detail{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.detail-visual{
+    height:390px;
+    padding:25px;
+}
+
+.detail-body{
+    padding:30px;
+}
+
+.detail-body p{
+    color:#9aa9be;
+    max-width:800px;
+    margin:12px 0 22px;
+}
+
+.back{
+    display:inline-block;
+    color:#00e5ff;
+    margin-bottom:20px;
+}
+
+/* ================= SERVICES ================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.service{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:18px;
+    padding:25px;
+    transition:.2s;
+}
+
+.service:hover{
+    transform:translateY(-4px);
+    border-color:#00e5ff;
+}
+
+.icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#8998ad;
+    font-size:14px;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-box{
+    background:#0b111d;
+    border:1px solid #1a2940;
+    border-radius:20px;
+    padding:25px;
+}
+
+.portfolio-title{
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.portfolio-list{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
+.portfolio-item{
+    border:1px solid #1c2d45;
+    background:#08101b;
+    border-radius:14px;
+    padding:18px;
+    text-align:center;
+}
+
+.portfolio-item .mini{
+    height:80px;
+    border-radius:10px;
+    margin-bottom:12px;
+    background:linear-gradient(135deg,#071b2a,#12334c);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#00e5ff;
+    font-weight:bold;
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.contact-item{
+    padding:15px 0;
+    border-bottom:1px solid #172438;
+    color:#b5c1d1;
+}
+
+.contact-item a{
+    color:#00e5ff;
+}
+
+.socials{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:18px;
+}
+
+.social{
+    padding:10px 14px;
+    border:1px solid #293852;
+    border-radius:10px;
+    color:#aebbd0;
+}
+
+.social:hover{
+    border-color:#00e5ff;
+    color:#00e5ff;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid #172238;
+    padding:30px 0;
+    text-align:center;
+    color:#718097;
+    font-size:13px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:850px){
+
+    nav{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        right:0;
+        background:#080d16;
+        padding:20px;
+        flex-direction:column;
+        border-bottom:1px solid #172238;
+    }
+
+    nav.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .about-grid,
+    .contact-grid,
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .portfolio-list{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:520px){
+
+    .hero{
+        min-height:78vh;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+    .section-title{
+        font-size:30px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .portfolio-list{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .visual{
+        height:210px;
+    }
+
+    .detail-visual{
+        height:300px;
+        padding:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#home" class="logo">
+Mir <span>Talib AI</span>
+</a>
+
+<button class="menu" onclick="toggleMenu()">
+☰
+</button>
+
+<nav id="nav">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#services">Services</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- ================= HOME ================= -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+<div class="badge">
+🤖 AI • Projects • Technology
+</div>
+
+<h1>
+Building With AI.<br>
+<span class="cyan">
+Creating The Future.
+</span>
+</h1>
+
+<p>
+Welcome to Mir Talib AI — a personal technology platform
+for AI projects, websites, software ideas and digital solutions.
+</p>
+
+<div class="buttons">
+
+<a class="btn primary" href="#projects">
+Explore Projects
+</a>
+
+<a class="btn" href="#contact">
+Contact Me
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+<div>
+
+<h2 class="section-title">
+About Mir Talib AI
+</h2>
+
+<p class="section-sub">
+Learning • Building • Creating
+</p>
+
+<p>
+Mir Talib AI is a personal technology platform focused on
+AI projects, websites, software concepts, digital creativity
+and future business ideas.
+</p>
+
+<p style="margin-top:15px;color:#8998ad;">
+The goal is simple: learn technology, build useful projects,
+experiment with AI and turn ideas into real products.
+</p>
+
+</div>
+
+<div class="about-box">
+
+<h3>
+🚀 What I Build
+</h3>
+
+<p style="margin-top:12px;">
+AI learning tools, creative AI projects, websites,
+software prototypes, digital content, automation ideas
+and future digital products.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="stats">
+
+<div class="stat">
+<strong>AI</strong>
+<span>Projects</span>
+</div>
+
+<div class="stat">
+<strong>Web</strong>
+<span>Development</span>
+</div>
+
+<div class="stat">
+<strong>Digital</strong>
+<span>Solutions</span>
+</div>
+
+<div class="stat">
+<strong>Future</strong>
+<span>Ideas</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+<div class="container">
+
+<h2 class="section-title">
+My Projects
+</h2>
+
+<p class="section-sub">
+Click any project to explore it.
+</p>
+
+
+<div class="project-grid">
+
+
+<!-- POSTER AI -->
+
+<div class="project"
+onclick="openProject('posterPage')">
+
+<div class="visual">
+
+<div class="app poster">
+
+<div class="app-top">
+🎨 PosterAI
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Create</div>
+<div>Templates</div>
+<div>Designs</div>
+<div>Settings</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Turn Ideas Into Posters
+</div>
+
+<div class="small-text">
+Create amazing designs with AI.
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">Business</div>
+<div class="fake-card">Education</div>
+<div class="fake-card">Birthday</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>PosterAI</h3>
+
+<p>
+AI poster creation and digital design project.
+</p>
+
+<div class="tags">
+<span class="tag">AI</span>
+<span class="tag">Design</span>
+<span class="tag">Creative</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TRADELEARN -->
+
+<div class="project"
+onclick="openProject('tradePage')">
+
+<div class="visual">
+
+<div class="app trade">
+
+<div class="app-top">
+📈 TradeLearn AI
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Dashboard</div>
+<div>Learn</div>
+<div>Practice</div>
+<div>Courses</div>
+<div>Settings</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Welcome Back!
+</div>
+
+<div class="small-text">
+Learn • Practice • Grow
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">$10,000</div>
+<div class="fake-card">24 Trades</div>
+<div class="fake-card">75%</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>TradeLearn AI</h3>
+
+<p>
+Trading education and practice simulation project.
+</p>
+
+<div class="tags">
+<span class="tag">Learning</span>
+<span class="tag">Simulation</span>
+<span class="tag">Finance Education</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- STUDY -->
+
+<div class="project"
+onclick="openProject('studyPage')">
+
+<div class="visual">
+
+<div class="app study">
+
+<div class="app-top">
+📚 AI Study Assistant
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Subjects</div>
+<div>Questions</div>
+<div>Notes</div>
+<div>Practice</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Hello, Student!
+</div>
+
+<div class="small-text">
+Learn smart. Study better.
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">📖 Study</div>
+<div class="fake-card">❓ Solve</div>
+<div class="fake-card">📝 Practice</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>AI Study Assistant</h3>
+
+<p>
+A student-focused learning and study dashboard concept.
+</p>
+
+<div class="tags">
+<span class="tag">Education</span>
+<span class="tag">AI</span>
+<span class="tag">Study</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TALIBAI -->
+
+<div class="project"
+onclick="openProject('talibPage')">
+
+<div class="visual">
+
+<div class="app talib">
+
+<div class="app-top">
+🌐 TalibAI
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Services</div>
+<div>Portfolio</div>
+<div>About</div>
+<div>Contact</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+AI Solutions
+</div>
+
+<div class="small-text">
+For creators & businesses.
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">AI Services</div>
+<div class="fake-card">Websites</div>
+<div class="fake-card">Content</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="project-content">
+
+<h3>TalibAI Website</h3>
+
+<p>
+AI learning and digital services website concept.
+</p>
+
+<div class="tags">
+<span class="tag">Website</span>
+<span class="tag">AI</span>
+<span class="tag">Business</span>
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECT DETAIL: POSTER ================= -->
+
+<section class="project-page" id="posterPage">
+
+<div class="container">
+
+<a href="#projects"
+class="back"
+onclick="closeProjects()">
+← Back to Projects
+</a>
+
+<div class="detail">
+
+<div class="detail-visual">
+
+<div class="app poster">
+
+<div class="app-top">
+🎨 PosterAI — Project Preview
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Create Poster</div>
+<div>Templates</div>
+<div>My Designs</div>
+<div>Settings</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Turn Your Ideas Into Amazing Posters
+</div>
+
+<div class="small-text">
+AI-powered creative poster concept.
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">Business</div>
+<div class="fake-card">Education</div>
+<div class="fake-card">Birthday</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="detail-body">
+
+<h2>PosterAI</h2>
+
+<p>
+PosterAI is a creative AI project concept designed
+for making posters, banners and digital designs.
+</p>
+
+<a href="#contact"
+class="btn primary">
+Ask About Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TRADE DETAIL ================= -->
+
+<section class="project-page" id="tradePage">
+
+<div class="container">
+
+<a href="#projects"
+class="back"
+onclick="closeProjects()">
+← Back to Projects
+</a>
+
+<div class="detail">
+
+<div class="detail-visual">
+
+<div class="app trade">
+
+<div class="app-top">
+📈 TradeLearn AI — Project Preview
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Dashboard</div>
+<div>Learn</div>
+<div>Practice</div>
+<div>Courses</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Practice Dashboard
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">$10,000</div>
+<div class="fake-card">24 Trades</div>
+<div class="fake-card">75%</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="detail-body">
+
+<h2>TradeLearn AI</h2>
+
+<p>
+TradeLearn AI is a learning and simulation project for
+understanding trading concepts and practicing without
+real-money trading.
+</p>
+
+<a href="#contact"
+class="btn primary">
+Ask About Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= STUDY DETAIL ================= -->
+
+<section class="project-page" id="studyPage">
+
+<div class="container">
+
+<a href="#projects"
+class="back"
+onclick="closeProjects()">
+← Back to Projects
+</a>
+
+<div class="detail">
+
+<div class="detail-visual">
+
+<div class="app study">
+
+<div class="app-top">
+📚 AI Study Assistant
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Subjects</div>
+<div>Question Solver</div>
+<div>Notes</div>
+<div>Practice</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+Hello, Student!
+</div>
+
+<div class="small-text">
+Learn smart. Study better.
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">Study Topics</div>
+<div class="fake-card">Solve Questions</div>
+<div class="fake-card">Practice Tests</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="detail-body">
+
+<h2>AI Study Assistant</h2>
+
+<p>
+A student-focused AI learning concept with study topics,
+question solving, practice, notes and revision features.
+</p>
+
+<a href="#contact"
+class="btn primary">
+Ask About Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= TALIBAI DETAIL ================= -->
+
+<section class="project-page" id="talibPage">
+
+<div class="container">
+
+<a href="#projects"
+class="back"
+onclick="closeProjects()">
+← Back to Projects
+</a>
+
+<div class="detail">
+
+<div class="detail-visual">
+
+<div class="app talib">
+
+<div class="app-top">
+🌐 TalibAI Website
+</div>
+
+<div class="app-body">
+
+<div class="side">
+
+<div class="active">Home</div>
+<div>Services</div>
+<div>Portfolio</div>
+<div>About</div>
+<div>Pricing</div>
+<div>Contact</div>
+
+</div>
+
+<div class="screen">
+
+<div class="screen-title">
+AI Solutions for Creators
+</div>
+
+<div class="small-text">
+Websites • AI Content • Digital Services
+</div>
+
+<div class="fake-grid">
+
+<div class="fake-card">AI Services</div>
+<div class="fake-card">Website Creation</div>
+<div class="fake-card">Digital Content</div>
+
+</div>
+
+<div class="fake-chart"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="detail-body">
+
+<h2>TalibAI Website</h2>
+
+<p>
+TalibAI is an AI learning and digital services website
+concept for creators, local brands and small businesses.
+</p>
+
+<a href="#contact"
+class="btn primary">
+Ask About Project
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+Services
+</h2>
+
+<p class="section-sub">
+AI and digital services.
+</p>
+
+<div class="service-grid">
+
+
+<div class="service">
+
+<div class="icon">🤖</div>
+
+<h3>AI Solutions</h3>
+
+<p>
+AI-powered ideas, tools and digital workflows.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">🌐</div>
+
+<h3>Website Creation</h3>
+
+<p>
+Modern responsive websites for projects and businesses.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">🎨</div>
+
+<h3>Digital Content</h3>
+
+<p>
+AI-assisted images, posters, videos and social content.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">⚙️</div>
+
+<h3>AI Automation</h3>
+
+<p>
+Simple automation concepts for repetitive digital tasks.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">📁</div>
+
+<h3>Portfolio Setup</h3>
+
+<p>
+Professional project showcases and digital profiles.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">💡</div>
+
+<h3>Digital Ideas</h3>
+
+<p>
+Creative technology and future product concepts.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PORTFOLIO ================= -->
+
+<section id="portfolio">
+
+<div class="container">
+
+<h2 class="section-title">
+Portfolio
+</h2>
+
+<p class="section-sub">
+Selected project showcase.
+</p>
+
+<div class="portfolio-box">
+
+<div class="portfolio-title">
+
+<h3>My Project Collection</h3>
+
+<span class="cyan">
+2026
+</span>
+
+</div>
+
+
+<div class="portfolio-list">
+
+
+<div class="portfolio-item">
+
+<div class="mini">
+🎨 PosterAI
+</div>
+
+<strong>PosterAI</strong>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="mini">
+📈 TradeLearn
+</div>
+
+<strong>TradeLearn AI</strong>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="mini">
+📚 Study AI
+</div>
+
+<strong>Study Assistant</strong>
+
+</div>
+
+
+<div class="portfolio-item">
+
+<div class="mini">
+🌐 TalibAI
+</div>
+
+<strong>TalibAI Website</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<p class="section-sub">
+Let's talk about an AI, website or digital project.
+</p>
+
+
+<div class="contact-grid">
+
+
+<div class="contact-box">
+
+<h3>
+📞 Direct Contact
+</h3>
+
+
+<div class="contact-item">
+
+📱 WhatsApp:
+
+<a href="https://wa.me/917298604815"
+target="_blank"
+rel="noopener">
+
+Chat on WhatsApp
+
+</a>
+
+</div>
+
+
+<div class="contact-item">
+
+✉️ Email:
+
+<a href="mailto:mirrasheedmir25@gmail.com">
+
+mirrasheedmir25@gmail.com
+
+</a>
+
+</div>
+
+
+<div class="buttons"
+style="justify-content:flex-start;margin-top:20px;">
+
+<a class="btn primary"
+href="https://wa.me/917298604815"
+target="_blank">
+
+WhatsApp Me
+
+</a>
+
+<a class="btn"
+href="mailto:mirrasheedmir25@gmail.com">
+
+Email Me
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>
+🌐 Social Links
+</h3>
+
+<p style="margin-top:10px;">
+
+Add your real social profiles here when you
+create them.
+
+</p>
+
+
+<div class="socials">
+
+<a class="social"
+href="#"
+onclick="return false">
+
+GitHub
+
+</a>
+
+<a class="social"
+href="#"
+onclick="return false">
+
+YouTube
+
+</a>
+
+<a class="social"
+href="#"
+onclick="return false">
+
+Instagram
+
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<strong style="color:#00e5ff;">
+Mir Talib AI
+</strong>
+
+<br>
+
+Building With AI. Creating The Future.
+
+<br><br>
+
+© 2026 Mir Talib AI • All Rights Reserved
+
+</div>
+
+</footer>
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("nav")
+    .classList
+    .toggle("open");
+
+}
+
+
+/* OPEN PROJECT */
+
+function openProject(id){
+
+    document
+    .querySelectorAll(".project-page")
+    .forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    var page=document.getElementById(id);
+
+    if(page){
+
+        page.classList.add("active");
+
+        window.scrollTo({
+            top:page.offsetTop-70,
+            behavior:"smooth"
+        });
+
+    }
+
+}
+
+
+/* CLOSE PROJECT */
+
+function closeProjects(){
+
+    document
+    .querySelectorAll(".project-page")
+    .forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+}
+
+
+/* CLOSE MOBILE MENU WHEN LINK CLICKED */
+
+document
+.querySelectorAll("nav a")
+.forEach(function(link){
+
+    link.addEventListener("click",function(){
+
+        document
+        .getElementById("nav")
+        .classList
+        .remove("open");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
